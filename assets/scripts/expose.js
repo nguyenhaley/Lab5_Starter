@@ -13,6 +13,7 @@ function init() {
   let volumeControlImg = volumeControls.querySelector("img");
 
   let soundButton = document.querySelector("button");
+  const jsConfetti = new JSConfetti();
 
   selectElement.addEventListener("change", (event) => {
     currentHorn = event.target.value;
@@ -45,7 +46,6 @@ function init() {
   // will play audio when button is pressed 
   soundButton.addEventListener("click", () => {
     if(currentHorn == "party-horn"){
-      const jsConfetti = new JSConfetti();
       jsConfetti.addConfetti();
       selectedAudio.play();
     }
